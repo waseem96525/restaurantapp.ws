@@ -3,6 +3,9 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+// Initialize database (MUST be before routes)
+require('./db/database');
+
 // Import routes
 const menuRoutes = require('./routes/menu');
 const ordersRoutes = require('./routes/orders');
